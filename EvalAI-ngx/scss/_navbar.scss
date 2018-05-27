@@ -1,0 +1,120 @@
+// Styling for the navbar
+#mainNav {
+    border-color: fade-out($gray-darker, .95);
+    background-color: white;
+    @include transition-all;
+    @include heading-font;
+    .navbar-brand {
+       // position: absolute;
+        background: url('../img/header/EvalAI_favicon.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top:6px;
+        width: 100px;
+        height: 40px;
+       // z-index: 4;
+    }
+
+    
+    .btn-top{
+        margin-top:-3px;
+        margin-right:-7px;
+        margin-left:20px;
+    }
+    .btn-top1{
+        float:left;
+        margin-top:-3px;
+
+
+    }
+    .btn-2 {
+    background-image: linear-gradient(to right, white,white );
+    padding: 10px 35px;
+    margin-left: 20px;
+    }
+    
+    .btn-outline {
+        color: white;
+        border: 1px solid;
+        border-color: white;
+        &:hover,
+        &:focus,
+        &:active,
+        &.active {
+            color: white;
+            border-color: $theme-primary;
+            background-color: $theme-primary;
+        }
+    }
+    .text{
+        color:#395177 !important; 
+    }
+    .navbar-toggler {
+        font-size: 12px;
+        padding: 8px 10px;
+        color: $gray-darker;
+    }
+    .navbar-nav {
+        > li {
+            > a {
+                font-size: 11px;
+                @include alt-font;
+
+            }
+            > a,
+            > a:focus {
+                color: $gray-darker;
+                &:hover {
+                    color: $theme-primary;
+                }
+            }
+        }
+    }
+    @media (min-width: 992px) {
+        .btn-1 {
+            background-image: white;
+            color: white;
+            &:hover,
+            &:focus {
+                background-image: white;
+
+                color: white;
+            }
+          }
+        border-color: transparent;
+        background-color: transparent;
+        .navbar-brand {
+            color: fade(white, 70%);
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
+        .navbar-nav > li > a,
+        .navbar-nav > li > a:focus {
+            color: fade-out(white, .3);
+            &:hover {
+                color: white;
+            }
+        }
+        &.navbar-shrink {
+            border-color: fade-out($gray-darker, .9);
+            background-color: white;
+            .navbar-brand {
+                color: $gray-darker;
+                &:hover,
+                &:focus {
+                    color: $theme-primary;
+                }
+            }
+            .navbar-nav > li > a,
+            .navbar-nav > li > a:focus {
+                color: $gray-darker;
+                &:hover {
+                    color: $theme-primary;
+                }
+            }
+           
+        }
+    }
+}
